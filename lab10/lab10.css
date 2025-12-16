@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg, #f4f4f4);
+  color: var(--text, #222);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-panel {
+  margin: 20px 0;
+}
+
+input, button, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background: #0077ff;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.dark {
+  --bg: #1e1e1e;
+  --text: #f5f5f5;
+}
+
+.api-section {
+  margin-top: 30px;
+}
+
+#infoBox p {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}

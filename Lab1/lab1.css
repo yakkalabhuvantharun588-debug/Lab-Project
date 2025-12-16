@@ -1,0 +1,74 @@
+* {
+  margin: 1.4;
+  padding: 1.2;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 2.3;
+  background-color: #7e2a65;
+  color: #ebe4e4;
+}
+
+header {
+  text-align: center;
+  padding: 1px;
+  background:linear-gradient(180deg,black,lightgrey);
+  color:white;
+  line-height: normal;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5px;
+  padding: 20px;
+}
+
+.profile {
+  display:block;
+  flex-direction: column;
+  text-align: center;
+}
+
+.biography {
+  max-width: 10000px;
+  text-align:center;
+  line-height: normal;
+}
+
+.social {
+  text-align: center;
+  line-height: normal;
+}
+
+.social ul {
+  
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  line-height:1%;
+}
+
+.social a {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.social a:hover {
+  color: #2c3e50;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background: #333;
+  color: white;
+  width: 100%;
+   position:fixed ;
+   bottom:1px;
+}
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greeting Popup</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f4ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        width: 300px;
+        text-align: center;
+        animation: fadeIn 1s ease;
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+    }
+
+    button {
+        background: #4a6cf7;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #2f4ad8;
+    }
+
+    /* POPUP */
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease;
+        animation: popFade 0.6s ease forwards;
+    }
+
+    .popup.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    @keyframes popFade {
+        from { opacity: 0; transform: translate(-50%, -60%) scale(0.7); }
+        to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="name" placeholder="Enter your name">
+    
+    <select id="mood">
+        <option value="">Select your mood</option>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="excited">Excited</option>
+        <option value="tired">Tired</option>
+    </select>
+
+    <button onclick="showGreeting()">Show Greeting</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <h2 id="greetText"></h2>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+function showGreeting() {
+    let name = document.getElementById("name").value;
+    let mood = document.getElementById("mood").value;
+    let popup = document.getElementById("popup");
+    let greetText = document.getElementById("greetText");
+
+    if (name === "" || mood === "") {
+        alert("Please enter your name and mood");
+        return;
+    }
+
+    // Time-based greeting
+    let hour = new Date().getHours();
+    let timeGreeting = "";
+
+    if (hour < 12) timeGreeting = "Good Morning";
+    else if (hour < 18) timeGreeting = "Good Afternoon";
+    else timeGreeting = "Good Evening";
+
+    // Mood-based message
+    let moodMessage = "";
+    if (mood === "happy") moodMessage = "It's great to see you smiling!";
+    if (mood === "sad") moodMessage = "Hope things get better soon.";
+    if (mood === "excited") moodMessage = "Your energy is contagious!";
+    if (mood === "tired") moodMessage = "Make sure to get some rest.";
+
+    greetText.innerHTML = `${timeGreeting}, ${name}!<br>${moodMessage}`;
+
+    popup.classList.add("show");
+}
+
+function closePopup() {
+    document.getElementById("popup").classList.remove("show");
+}
+</script>
+
+</body>
+</html>

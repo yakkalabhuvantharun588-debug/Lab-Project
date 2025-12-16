@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+  <header>
+    <h1>Event Registration for local community </h1>
+    <p>Please fill the below form</p>
+  </header>
+
+  <main>
+    <form class="registration-form">
+      <div class="form">
+        <label for="name">Fill Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form">
+        <label for="email">Correct Email-Id</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form">
+        <label for="event">Select Your Event</label>
+        <select id="event" name="event" required>
+          <option value="">-- Choose an Event --</option>
+          <option value="Workshop">Workshop</option>
+          <option value="seminar">Seminar</option>
+          <option value="community-meet">Community Meet</option>
+          <option value="ArtWorkshop">ArtWorkshop</option>
+          <option value="FitnessClass">FitnessClass</option>
+          <option value="BookClub">BookClub</option>
+          <option value="Chess Club Tournament">Chess Club Tournament</option>
+          <option value="Youth Talent Show">Youth Talent Show</option>
+          <option value="Cooking Class: International Cuisine">Cooking Class: International Cuisine</option>
+          <option value="Talent Show">Talent Show</option>
+          <option value="First Aid & CPR Training">First Aid & CPR Training</option>
+          </select>
+      </div>
+      
+      <div class="checkbox-group">
+            <label><strong>Preferences</strong></label>
+          <label><input type="radio" name="preferences" value="newsletter"> Receive NewsLetter</label>
+          <label><input type="radio" name="preferences" value="Accessibility"> Accessibility Accommodations</label>
+          <label><input type="radio" name="preferences" value="updates"> Event Updates</label>
+          <label><input type="radio" name="preferences" value="volunteer"> Volunteer Opportunities</label>
+          <label><input type="radio" name="preferences" value="Carpooling">Interested In Carpooling </label>
+        </div>
+      
+<div class="form">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Community Center. All rights reserved.</p>
+  </footer>
+</body>
+</html>

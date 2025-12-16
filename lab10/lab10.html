@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Task Dashboard</title>
+  <link rel="stylesheet" href="lab10.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Smart Task Dashboard</h1>
+    <button id="themeToggle">Switch Theme</button>
+  </header>
+
+  <section class="task-panel">
+    <input type="text" id="taskField" placeholder="Add a new task">
+    <button id="addTaskBtn">Add</button>
+  </section>
+
+  <section class="task-filter">
+    <label>Filter:</label>
+    <select id="taskFilter">
+      <option value="all">All</option>
+      <option value="done">Completed</option>
+      <option value="pending">Pending</option>
+    </select>
+  </section>
+
+  <ul id="taskContainer"></ul>
+
+  <section class="api-section">
+    <h2>External Info</h2>
+    <button id="fetchInfoBtn">Fetch Data</button>
+    <div id="infoBox"></div>
+  </section>
+
+  <script src="script10.js"></script>
+</body>
+</html>

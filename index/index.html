@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Project - Engineering Labs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .lab-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .lab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .info h3 {
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Lab Project</h1>
+        <p class="subtitle">Engineering Laboratory Experiments</p>
+        
+        <div class="labs-grid">
+            <div class="lab-card">Lab 1</div>
+            <div class="lab-card">Lab 2</div>
+            <div class="lab-card">Lab 3</div>
+            <div class="lab-card">Lab 4</div>
+            <div class="lab-card">Lab 5</div>
+            <div class="lab-card">Lab 6</div>
+            <div class="lab-card">Lab 7</div>
+            <div class="lab-card">Lab 8</div>
+            <div class="lab-card">Lab 9</div>
+            <div class="lab-card">Lab 10</div>
+        </div>
+        
+        <div class="info">
+            <h3>📂 Repository Contents:</h3>
+            <p>This repository contains all laboratory experiments and code for engineering coursework.</p>
+            <p style="margin-top: 10px;">Each lab folder contains:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Problem statements and requirements</li>
+                <li>Implementation code</li>
+                <li>Documentation and notes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
