@@ -60,12 +60,20 @@
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
       text-decoration: none;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
     }
 
-    .lab-card:hover {
+    .lab-card:hover:not(.disabled) {
       transform: translateY(-5px);
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .lab-card.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
 
     .info {
@@ -98,16 +106,16 @@
     <p class="subtitle">Engineering Laboratory Experiments</p>
 
     <div class="labs-grid">
-       <div class="lab-card"><a href="Lab1/lab1.html">Lab 1</a></div>
-            <div class="lab-card"><a href="Lab2/lab2.html">Lab 2</a></div>
-            <div class="lab-card"><a href="lab3/lab3.html">Lab 3</a></div>
-            <div class="lab-card"><a href="lab4/lab4.html">Lab 4</a></div>
-            <div class="lab-card"><a href="lab5/lab5.html">Lab 5</a></div>
-            <div class="lab-card"><a href="lab6/lab6.html">Lab 6</a></div>
-            <div class="lab-card"><a href="lab7/lab7.html">Lab 7</a></div>
-            <div class="lab-card"><a href="lab8/lab8.html">Lab 8</a></div>
-            <div class="lab-card"><a href="lab9/lab9.html">Lab 9</a></div>
-            <div class="lab-card"><a href="lab10/lab10.html">Lab 10</a></div>
+      <a href="../Lab1/lab1.html" class="lab-card">Lab 1</a>
+      <a href="../Lab2/lab2.html" class="lab-card">Lab 2</a>
+      <div class="lab-card disabled">Lab 3</div>
+      <div class="lab-card disabled">Lab 4</div>
+      <div class="lab-card disabled">Lab 5</div>
+      <div class="lab-card disabled">Lab 6</div>
+      <div class="lab-card disabled">Lab 7</div>
+      <div class="lab-card disabled">Lab 8</div>
+      <div class="lab-card disabled">Lab 9</div>
+      <div class="lab-card disabled">Lab 10</div>
     </div>
 
     <div class="info">
@@ -119,8 +127,9 @@
         <li>Implementation code and solutions</li>
         <li>Documentation and detailed notes</li>
       </ul>
-      <p style="margin-top: 15px;"><strong>Last Updated:</strong> December 16, 2025</p>
+      <p style="margin-top: 15px;"><strong>Status:</strong> 404 Errors Fixed</p>
       <p style="margin-top: 5px;"><strong>Active Labs:</strong> Lab 1 (Personal Portfolio), Lab 2 (Product Gallery)</p>
+      <p style="margin-top: 5px;"><strong>Note:</strong> Labs 3-10 are placeholders and will be available soon</p>
     </div>
   </div>
 </body>
